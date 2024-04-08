@@ -17,11 +17,20 @@ changeTextContent('paragraph', 'This is a sample paragraph.');
 
 // Event listener for button click to change text content
 var changeButton = document.getElementById('changeButton');
+let toggle = false
 
+// If conditional to toggle heading and paragraph elements betweent their original context and new context.
 if (changeButton) {
     changeButton.addEventListener('click', function() {
-        changeTextContent('heading', 'This is my website!');
-        changeTextContent('paragraph', 'Hello, Sun!');
+        if(!toggle){
+            changeTextContent('heading', 'This is my website!');
+            changeTextContent('paragraph', 'Hello, Sun!');
+            toggle = true
+        } else{
+            changeTextContent('heading', 'Hello, World!');
+            changeTextContent('paragraph', 'This is a paragraph');
+            toggle = false
+        }
     });
 } else {
     console.log("Button with ID 'changeButton' not found.");

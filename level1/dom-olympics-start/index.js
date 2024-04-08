@@ -59,6 +59,30 @@ form.addEventListener("submit", (e) => {
 
 document.getElementById('clear-button').addEventListener("click", function(){
     document.getElementById('input').value = "";
+    const messages = document.querySelectorAll('.message')
+    for (var i = 0; i < messages.length; i++){
+        messages[i].textContent = ''
+    }
+    })
+const leftM = document.querySelectorAll(".left")
+const rightM = document.querySelectorAll(".right")
+    const dropdown = document.getElementById('theme-drop-down')
+    dropdown.addEventListener('change', function(){
+        if(dropdown.value === 'theme-one' ) {
+            for(var i = 0; i < leftM.length; i++){
+                leftM[i].style.backgroundColor = 'blue'
+                rightM[i].style.backgroundColor = 'burlywood'
+                
+            }
+
+        } else {
+            for(var i = 0; i < leftM.length; i++){
+                leftM[i].style.backgroundColor = 'red'
+                rightM[i].style.backgroundColor = 'yellow'
+                
+            }
+
+        }
     })
     
 

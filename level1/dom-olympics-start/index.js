@@ -48,7 +48,7 @@ div.prepend(divRight)
 /*
 Used the preventDefault funtion to prevent the submit action from refreshing the web page when the event is fired
 called the elementId(clear-button), used an event listener click event and attached a value of an empty string to the input field
- in order to clear the input when the event is fired
+ in order to clear the input when clear is clicked
 
 */
 const form = document.getElementById("form")
@@ -64,6 +64,7 @@ document.getElementById('clear-button').addEventListener("click", function(){
         messages[i].textContent = ''
     }
     })
+    //created code to change theme color of the text content when dropdown is clicked and the color is selected.
 const leftM = document.querySelectorAll(".left")
 const rightM = document.querySelectorAll(".right")
     const dropdown = document.getElementById('theme-drop-down')

@@ -66,8 +66,7 @@ if (inputValue === '') {
    
   });
 
-  // added deleteBtn to store delete button, inserted adjacent to make it a sibling element to remove the list item
-  //after submission
+  // created button that removes the added list item.
   const deleteBtn = document.createElement("button");
   deleteBtn.name = "removeItem";
   deleteBtn.textContent = "X";

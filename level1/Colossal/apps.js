@@ -30,14 +30,21 @@ class Character { //constuctor function
     const squid = new Character("Thrash","Smash and Thrash", 20, 15,["Ink bottle","Jelly jar"])
     const orca = new Character("Tiny","Juggle launch",30, 20,["Magic skin","Water canon"])
 
-    let enemies = [shark, squid, orca];// instantiad enemies
+    let enemies = [shark, squid, orca];// instantiated enemies
 
     const randomize = (min,max) =>{
         return Math.floor(Math.random()*(max-min + 1)+ min);
     };
-
     while(isGameRunning) {
-        const nextMove = readline.question("What is your next move? Press [s] to swim, [c] to check your inventory, [q] to quit", {limit:["s","c","q" ]}
+        if(enemies.length === 0){
+            console.log(`${Hero.name} is the champion of The Lagoon!`
+
+            );
+            process.exit();
+           
+        };
+        
+        let nextMove = readline.question("What is your next move? Press [s] to swim, [c] to check your inventory, [q] to quit", {limit:["s","c","q" ]}
 
         ); 
         // console.log(nextMove)
@@ -77,31 +84,41 @@ if(options[fightOrSwimAway] === "fight"){// if else statement for fight or run o
    
     function fight(currentEnemy) {//while loop that runs the fight scenerion of the game 
          console.log(`You chose to fight ${currentEnemy.name} !`);
-        while(Hero.stamina > 0 && currentEnemy.stamina > 0) {
+         let isFighting = true 
+        while(isFighting) {
+           if( Hero.stamina > 0 && currentEnemy.stamina > 0){}
             currentEnemy.stamina -= Hero.attackPoints
-            console.log(`You delivered ${Hero.attackPoints} damage! ${currentEnemy.name} is reduced to ${currentEnemy.stamina}`
-
-            );
+            console.log(`You delivered ${Hero.attackPoints} damage! ${currentEnemy.name} is reduced to ${currentEnemy.stamina}`)
             Hero.stamina -= currentEnemy.attackPoints
-            console.log(`${currentEnemy.name} delivered ${currentEnemy.attackPoints} damage ${Hero.name} is reduced to ${Hero.stamina}`
-
-            );
-            if(Hero.stamina <= 0){
+            console.log(`${currentEnemy.name} delivered ${currentEnemy.attackPoints} damage ${Hero.name} is reduced to ${Hero.stamina}`);
+            
+            if(Hero.stamina <= 0 && currentEnemy.stamina > 0
+            ) {
                 console.log(`${Hero.name} has met their demise!`)
                 isGameRunning = false;
-               
-        
-            } 
-            if(currentEnemy.stamina <= 0) {
-                console.log(`${Hero.name} is victorious`);
-                const droppedItemIndex = randomize(0, currentEnemy.inventory.length -0);
+                process.exit()
+
+
+            }
+
+
+         
+
+          if(currentEnemy.stamina <= 0){ //removes current enemy from the game after the enemy's stamina drops to zero 
+                console.log(`${Hero.name} is the victor over ${currentEnemy.name}`);
+                enemies = enemies.filter(item => item.name !== currentEnemy.name);
+                const droppedItemIndex = randomize(0, currentEnemy.inventory.length -1);
                 const droppedItem = currentEnemy.inventory[droppedItemIndex];
                 console.log(`${currentEnemy.name} dropped ${droppedItem}`);
-                if(currentEnemy.stamina <=0){
-                    console.log(`${Hero.name} picked up ${droppedItem}`);
-                };
-    
-            };
+                inventory.push(droppedItem)
+                isFighting =false
+            }
+               
+        
+             
+           
+          
+            
            
 
         };
@@ -116,8 +133,8 @@ function swimAway(currentEnemy) {
 
     }else if(escapeChance === 2) {
         console.log(`You got caught in ${currentEnemy.name} 's trap! Get back in the fight`);
+        fight(currentEnemy);   
     };
-    fight(currentEnemy);   
 }
 
 

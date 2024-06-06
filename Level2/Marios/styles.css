@@ -1,0 +1,13 @@
+.container {
+    text-align: center;
+}
+
+.block {
+    margin: 10px;
+}
+
+.contact-block {
+    background-color: powderblue;
+    padding: 10px;
+    margin: 10px;
+}

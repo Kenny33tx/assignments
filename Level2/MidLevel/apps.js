@@ -21,3 +21,12 @@ const uppercaseStrings = strings.map(function(string){
     
 })
 console.log(uppercaseStrings) // logged the new variable to the console which returned the array in all caps.
+
+// Write a function that takes an array of numbers and returns a new array containing only the even numbers. 
+const numbers1 = [1, 2, 3, 4, 5, 6]; 
+const filterEvenNumbers = numbers1.filter(number => number % 2 === 0) 
+
+console.log(filterEvenNumbers); 
+// Output: [2, 4, 6]
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="mainPage">
+        
+
+        <form name="todoForm" id="todoForm" class="todoForm">
+         
+
+                <input type="text" name="title" id="title" value=""placeholder="title" >
+                
+                <input type="text" name="description" id="description" value="" placeholder="description">
+              
+                <input type="number" name="Price" id="Price" value="" placeholder="Price">
+                
+                <input type="text" name="imageUrl" id="imageUrl" value="" placeholder="image url">
+                
+                <input type="checkbox" name="checkbox" class="completed" id="completed" value="" id="">
+
+                <button type="submit" class="submit">submit</button>
+
+                <button type="delete" id="deleteBtn" class="delete">Delete </button>
+                
+            
+            </form>
+            
+               
+          
+        <div class="mainList">
+            <div id="toDoList">
+               
+            </div>
+          
+        </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="axios.js"></script>
+</body>
+</html>

@@ -1,13 +1,27 @@
-.container {
+body {
+    display: grid;
+    
+    
+}
+
+h1 {
+    text-align: center;
+    display: grid;
+    height: auto;
+    width: auto;
+}
+
+h2 {
     text-align: center;
 }
-
-.block {
-    margin: 10px;
+.Goomba{
+position: relative;
 }
 
-.contact-block {
-    background-color: powderblue;
-    padding: 10px;
-    margin: 10px;
+.Bob-omb {
+    position: relative;
+}
+
+.Cheep-Cheep{
+position: inherit;
 }

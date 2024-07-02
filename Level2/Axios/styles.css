@@ -1,0 +1,133 @@
+nav{
+    border: 3px solid blue;
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(35deg,white,blue);
+   position: relative;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+ h2 {
+  
+    
+    margin: auto;
+    padding: auto;
+    color: black;
+    font-size: 20px;
+    font-family: cursive;
+  
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    border-radius: 25px;
+    width: auto;
+    background-color: gray;
+   box-shadow: inset;
+}
+
+.mainPage {
+    
+    height: 100vh; 
+    width: 100vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 15px, 25px ;
+justify-content:space-around;
+}
+@media screen and (min-width:390px), (max-width: 844px), (orientation:landscape ) {
+    
+    .todoForm{
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(45deg, blue, white);
+        width: 25%;
+        height: 25%;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        border: none;
+        position:relative;
+    
+    }
+    .submit{
+        background: linear-gradient(to bottom, #2980b9, #87bdd8);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: font-size 0.3s;
+  height: 40px;
+    }
+  #submit-btn:hover{
+    font-size: 18px;
+  }
+ 
+      .title{
+        border: none;
+        border-radius: 25px
+     
+
+       }
+  .description{
+    border: none;
+    border-radius: 20px;
+  }
+    
+    .Price{
+        border: none;
+        border-radius: 25px;
+    }
+    
+    .imgurl{
+        border: none;
+        border-radius: 25px;
+       
+    }
+    #toDoList{
+        display: flex;
+        height: 10vh; 
+        width: 10vw;
+        justify-content: space-evenly;
+        border: none;
+        width: 50%;
+        height: 50%;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .mainList{
+    
+        display: flex;
+        width: 100%;
+        border: none;
+       margin-top: 20px;
+        flex-wrap:wrap;
+
+    }
+    .completed{
+        text-decoration: line-through;
+
+    }
+    nav, #footer{
+        border: 3px solid black;
+        justify-content: center;
+        display: flex;
+        position: relative;
+    }
+    @media screen and (max-width: 480px) {
+        body {
+          display: block; 
+          background-color: rgb(200, 191, 191);
+          gap: 0; 
+          
+        }
+}
+
+}

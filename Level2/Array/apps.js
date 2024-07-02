@@ -94,13 +94,21 @@ console.log(`${person.name} can watch the Matrix.`)
 
 
 // 6.Make an array of the names in h1s and the arrays in h2s
-function readyToPutInTheDom(){
-const h1 = document.createElement("h1")
-const h2 = document.createElement("h2")
-const people = makeStrings.map(person => person)
-const ages = makeStrings.map(age => age)
-console.log(h1.people)
-console.log(h2.ages)
-}
+// function readyToPutInTheDom(){
+// const h1 = document.createElement("h1")
+// const h2 = document.createElement("h2")
+// const people = makeStrings.map(person => person)
+// const ages = makeStrings.map(age => age)
+// console.log(h1.people)
+// console.log(h2.ages)
+// }
 
   
+function readyToPutInTheDom(array) {
+    const newArr = array.map(function(person) {
+        return `<h1>${person.name}</h1><h2>${person.age}<h2>`
+    })
+    return newArr
+}
+
+console.log(readyToPutInTheDom(namesOnly))

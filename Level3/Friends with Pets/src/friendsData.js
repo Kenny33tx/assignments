@@ -5,11 +5,11 @@ const friends = [
       age: 29,
       pets: [
         {
-          name: "spot",
-          breed: "tabby"
+          name: "Spot",
+          breed: "Tabby"
         },{
           name: "John Johnson",
-          breed: "husky"
+          breed: "Husky"
         },{
           name: "Bear the bear",
           breed: "Grizzly"
@@ -33,7 +33,7 @@ const friends = [
           breed: "Akita"
         },{
           name: "Anna",
-          breed: "persian cat"
+          breed: "Persian Cat"
         }
       ]
     },{
@@ -41,17 +41,17 @@ const friends = [
       age: 20,
       pets: [
         {
-          name: "fluffy",
-          breed: "sphynx cat"
+          name: "Fluffy",
+          breed: "Sphynx Cat"
         },{
-          name: "patches",
-          breed: "sphynx cat"
+          name: "Patches",
+          breed: "Sphynx Cat"
         },{
-          name: "tiger",
-          breed: "sphynx cat"
+          name: "Tiger",
+          breed: "Sphynx Cat"
         },{
-          name: "oscar",
-          breed: "sphynx cat"
+          name: "Oscar",
+          breed: "Sphynx Cat"
         }
       ]
     }

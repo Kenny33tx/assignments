@@ -27,7 +27,7 @@ const Friend = ({ name, age, pets }) => (
 
 const FriendList = () => (
   <div>
-    <h1>Friend List</h1>
+    <h1 className="title">Friends with Pets</h1>
     {friendsData.map((friend, index) => (
       <Friend key={index} {...friend} />
     ))}

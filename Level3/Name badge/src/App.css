@@ -1,0 +1,104 @@
+.flexContainer{
+    border: 1px none;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+ li{
+    list-style-type: none;
+ }
+.firstName{
+    height: 20px;
+    
+    margin: 10px;
+   
+    position: relative;
+}
+
+.lastName{
+    height: 20px;
+    
+    margin: 10px;
+    
+    position: relative;
+}
+.phone{
+    height: 20px;
+    
+    margin: 10px;
+  
+    position: relative;;
+}
+.pob{
+    height: 20px;
+    
+    margin: 10px;
+  
+}
+.email{
+height: 20px;
+margin: 10px;
+}
+.favFood{
+height: 20px;
+margin: 10px;
+}
+
+.aboutMe{
+    /* width: 50rem; */
+    height: 10rem;
+    margin: 1rem 5rem;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+} 
+.Submit{
+    color: rgb(255, 255, 255); 
+    height: 2rem;
+    width: 10rem;
+    margin: 5px;
+    font-size: 16px; 
+    line-height: 16px; 
+    padding: 6px; 
+    border-radius: 10px; 
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal; 
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+    border: none;
+     display: inline-block;
+     cursor: pointer;
+     grid-column: 1/1;
+    
+}
+.Submit:hover{
+    background: #1C6EA4;
+}
+.badgeCard{
+    display: grid;
+    grid-column: 1/1;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 18rem;
+    width: 18rem;
+    margin: 15rem;
+    text-align: center;
+    align-items: center;
+    
+    
+}

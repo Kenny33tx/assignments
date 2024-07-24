@@ -11,7 +11,7 @@ export default function Badgeform(props) {
     aboutMe: "",
   };
   const [badge, setBadge] = useState(initialData);
-  const [isdisabled,setIsDisabled] = useState(true)
+  
  
 
   function handleChange(e) {
@@ -96,10 +96,10 @@ export default function Badgeform(props) {
         name="aboutMe"
         required
       />
-
-      <button type="submit" className="Submit" onChange= {handleChange} >
+<button className="Submit">Submit</button>
+      {/* <button type="submit" className="Submit" onChange= {handleChange} >
         Submit
-      </button>
+      </button> */}
     </form>
   );
 }

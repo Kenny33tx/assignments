@@ -5,17 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export default function MemeForm({meme,setMemes, memes,setMeme, setMemeList}) {
  
-    
-    const [memeImage,setMemeImage]=useState([])
-    const [allMemeImages,setAllMemeImages]=useState([])
- 
-    
-    
    
-        // console.log("allMemeImages",allMemeImages)
-
-      
-
     function handleChange(e){
         const {name,value} = e.target
         setMeme((preveMeme)=>({
@@ -30,17 +20,16 @@ export default function MemeForm({meme,setMemes, memes,setMeme, setMemeList}) {
           id: uuidv4()
         };
     
-        
-    
-        setMemeList((prevList) => [...prevList, newMeme]);
-    
-        setMeme({
-          topText: "",
-          bottomText: "",
-          randomImage: "http://i.imgflip.com/1bij.jpg",
-        });
-      }
+         setMemeList((prevList) => [...prevList, newMeme])
 
+         setMeme({
+            topText: "",
+            bottomText: "",
+            randomImage: "http://i.imgflip.com/1bij.jpg",
+        });
+    }
+    
+      
     function handleSubmit(e){
         e.preventDefault()
         addMemeToList()
@@ -93,8 +82,7 @@ export default function MemeForm({meme,setMemes, memes,setMeme, setMemeList}) {
        value={meme.bottomText}>
         
        </input>
-       <button onClick={getMemeImage} 
-       className='meme--button'>New Meme Alert!</button>
+      
 
 {/* <button className="meme--button" onClick={addMemeToList}>
           Add to list
@@ -104,13 +92,14 @@ export default function MemeForm({meme,setMemes, memes,setMeme, setMemeList}) {
 
        <div className='meme'>
        
-       <h2 className='meme--text top'>{meme.topText}</h2>
-       <h2 className='meme--text bottom'>{meme.bottomText}</h2>
+       <h2 className='meme--textTop'>{meme.topText}</h2>
+       <h2 className='meme--textBottom'>{meme.bottomText}</h2>
        <img src={meme.randomImage} className='meme--image' />
        </div>
        <button onClick={addMemeToList} className='meme--button'>Add</button>
 
-      
+       <button onClick={getMemeImage} 
+       className='meme--button'>New Meme Alert!</button>
        
        </div>
   

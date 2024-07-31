@@ -1,0 +1,35 @@
+
+div,button{
+  padding: 5px 10px;
+  margin: 5px 0px;
+  
+  font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  border: none;
+   border-radius: 5px;
+
+}
+
+.light-theme{
+  background-color: #cfcfcf;
+}
+
+.dark-theme{
+background-color: #3a3b3c;
+}
+
+.blue-option{
+  background-color: powderblue;
+}
+
+.red-option{
+  background-color: firebrick;
+}
+
+.select{
+  display: flex;
+  justify-content: space-evenly;
+  
+}

@@ -8,9 +8,9 @@ export default function Select() {
     
    <div className={`${context.color}-option`} >
 
-<h3 className='select' > {context.color}Home</h3>
-<h3 className='select' > {context.color}About</h3>
-<h3 className='select' > {context.color}Contact</h3>
+<h3 className='select' > Home</h3>
+<h3 className='select' > About</h3>
+<h3 className='select' >Contact</h3>
 
 </div>
 

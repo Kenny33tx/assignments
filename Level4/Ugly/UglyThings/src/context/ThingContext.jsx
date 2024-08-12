@@ -7,11 +7,14 @@ export default function ThingProvider({ children }) {
   const [uglyThings, setUglyThings] = useState([]);
 
   useEffect(() => {
-    axios
+    const getUglyThings= ()=>{
+      axios
       .get("https://api.vschool.io/kennysmith/thing")
       .then((res) => setUglyThings(res.data))
 
       .catch((err) => console.log(err));
+    }
+    getUglyThings()
   }, []);
 
   const addThing = (thing) => {
@@ -25,8 +28,25 @@ export default function ThingProvider({ children }) {
 
         });
 
-    
+      
+
     };
+ 
+    const updatedThing= (id, updatedThing)=> {
+      axios.put(`https://api.vschool.io/kennysmith/thing/${id}`,updatedThing)
+      .then((res) => {
+        
+        setUglyThings( uglyThings.map((thing)=>(thing._id === id ? updatedThing: thing)))
+           
+        
+      })
+
+      .catch((error) => {
+        console.error("Error updating thing:", error);
+      });
+    }
+ 
+    
 
     const deleteThing = (id) => {
       axios.delete(`https://api.vschool.io/kennysmith/thing/${id}`)
@@ -34,7 +54,7 @@ export default function ThingProvider({ children }) {
           // Assuming res.data is the deleted item, you may not need to add it back to the list
           // setUglyThings([...uglyThings, res.data]);
           // Instead, you can filter out the deleted item from the list
-          setUglyThings(uglyThings.filter(thing => thing.id !== id));
+          setUglyThings(uglyThings.filter(thing => thing._id !== id));
         })
         .catch((error) => {
           console.error("Error deleting thing:", error);
@@ -42,7 +62,7 @@ export default function ThingProvider({ children }) {
     };
 
   return (
-    <ThingContext.Provider value={{ uglyThings, setUglyThings, addThing, deleteThing}}>
+    <ThingContext.Provider value={{ uglyThings, setUglyThings, addThing, deleteThing, updatedThing}}>
       {children}
     </ThingContext.Provider>
   );

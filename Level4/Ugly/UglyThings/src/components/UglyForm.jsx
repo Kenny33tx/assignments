@@ -25,17 +25,13 @@ export default function UglyForm() {
     e.preventDefault();
     addThing(uglyData);
     console.log("added");
-    setUglyData({
-      title: "",
-      description: "",
-      imgUrl: "",
-    });
+    setUglyData((prevData)=>({
+      ...prevData,
+      uglyData
+    }));
   }
 
-  function uglyDelete(id) {
-    deleteThing(id);
-    console.log("removed");
-  }
+ 
   return (
     <div className="container">
       {/* <h2 className='title'>
@@ -71,7 +67,7 @@ export default function UglyForm() {
       <button className="button" onClick={uglySubmit}>
         Add Ugly Thing
       </button>
-      
+     
     </div>
   );
 }

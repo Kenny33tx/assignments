@@ -1,5 +1,7 @@
 
-
+body{
+  background-image: linear-gradient(95deg,whitesmoke,blue);
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
   justify-content: center;
   min-height: 10rem;
   min-width: 50%;
-  background-color: rgb(0, 81, 255);
+ 
   
 }
 
@@ -24,14 +26,35 @@
 }
 
 .button {
-  margin-top: 20px;
+  margin: .5rem;
+  width: 75px;
   border: none;
   border-radius: 5px;
   cursor: pointer ;
-  
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ background-image: linear-gradient(180deg,white,blue);
+ 
 }
 
 .button:hover{
   background-color: whitesmoke;
-  
+ 
+}
+
+
+
+.title{
+  display: inline;
+  color: blanchedalmond;
+  font-size:xx-large;
+  align-items: center;
+}
+
+.description{
+  color: antiquewhite;
+}
+
+.image{
+  margin: 15px;
+  border: 1px solid black;
 }

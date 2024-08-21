@@ -54,7 +54,7 @@ export default function UpdateForm({thing}) {
          placeholder='Image Url'
          onChange={handleChange}
         ></input>
-<button>Save</button>
+<button className='button'>Save</button>
 
     </form>
 

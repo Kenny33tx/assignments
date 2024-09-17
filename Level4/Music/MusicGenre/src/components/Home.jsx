@@ -18,11 +18,11 @@ export default function Home() {
   const handleGenreChange = (newGenre) => {
     setSelectedGenre(newGenre);
   };
-// better error handling 
+// better error handling (async)
   const fetchAndPlaySong = async () => {
     setIsLoading(true);
     setErrorMessage(null);
-//lets other functionality process while waiting to achieve data 
+//lets other functionality process while waiting to retrieve data (await)
     try {
       const searchResponse = await axios.get(
         "https://www.googleapis.com/youtube/v3/search",
